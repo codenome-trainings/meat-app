@@ -7,7 +7,9 @@
 
               {{ form.valid }}
               {{ form.value | json }}
-
+              
+              <!--novalidate: desabilida a validação dos browsers. Pois cada browser tem seu estilo de validação-->
+              <!--ngForm: Todo formulário já tem como padrão o ngForm. E esse termo é importante para validar os campos-->
               <form #form="ngForm" novalidate>
                 <div class="row">
                   <div class="col-xs-12">
@@ -35,7 +37,6 @@
                     <mt-input-container label="Complemento">
                       <input type="text" class="form-control" name="optional" ngModel placeholder="Complemento">
                     </mt-input-container>
-
                   </div>
                   <!-- /.col -->
                 </div>

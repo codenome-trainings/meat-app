@@ -7,7 +7,7 @@ import { RadioOption } from 'app/shared/radio/radio-option.model';
   selector: 'mt-radio',
   templateUrl: './radio.component.html',
   providers: [
-    { 
+    {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => RadioComponent),
       multi: true
@@ -17,9 +17,9 @@ import { RadioOption } from 'app/shared/radio/radio-option.model';
 export class RadioComponent implements OnInit, ControlValueAccessor {
 
   @Input() options: RadioOption[];
-
+  
   value: any;
-
+  
   onChange: any;
 
   constructor() { }
@@ -27,9 +27,17 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {
   }
 
+  isChecked(value: any): boolean {
+    return this.value === value;
+  }
+
   setValue(value: any) {
     this.value = value;
-    this.onChange(this.value);
+    this.setOnChange(this.value);
+  }
+
+  setOnChange(value: any): void {
+    this.value = value;
   }
 
   /**

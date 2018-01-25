@@ -1,0 +1,47 @@
+<section class="content">
+    <section class="invoice">
+        {{ form.valid }} {{ form.value | json }}
+    </section>
+</section>
+<section class="content">
+    <h1>Formulário de cadastro de teste</h1>
+    <section class="invoice">
+        <form #form="ngForm" novalidate>
+            <div class="row invoice-info">
+                <div class="col-md-3">
+                    <mt-input-test errorMessage="Enter valid username" label="Username">
+                        <input type="text" class="form-control" name="username" pattern="" required placeholder="Enter your username" autocomplete="off"
+                            minlength="5" maxlength="20">
+                    </mt-input-test>
+                </div>
+                <div class="col-md-3">
+                    <mt-input-test errorMessage="Enter valid e-amil" label="Email">
+                        <input type="email" class="form-control" name="username" ngModel required placeholder="Enter your e-mail adress" autocomplete="off"
+                            minlength="5" maxlength="20">
+                    </mt-input-test>
+                </div>
+                <div class="col-md-3">
+                    <mt-input-test errorMessage="Enter valid password" label="Password">
+                        <input type="password" class="form-control" name="password" ngModel required placeholder="Enter your password" autocomplete="off"
+                            minlength="5" maxlength="20">
+                    </mt-input-test>
+                </div>
+                <div class="col-md-3">
+                    <mt-input-test errorMessage="Your password need iqual preview field" label="Repeat Password">
+                        <input type="password" class="form-control" name="repeatPassword" #iptRepeatPassword="ngModel" ngModel required placeholder="Repeat Password"
+                            autocomplete="off" minlength="10" maxlength="20">
+                    </mt-input-test>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="row">
+            <div class="col-xm-12 col-md-12">
+                <button class="btn btn-success pull-right" [disabled]="form.invalid">
+                    <i class="fa fa-android"></i> Cadastrar Usuário</button>
+            </div>
+        </div>
+
+    </section>
+</section>
