@@ -1,13 +1,12 @@
 import { Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from 'app/about/about.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantDetailComponent } from 'app/restaurant-detail/restaurant-detail.component';
 import { MenuComponent } from 'app/restaurant-detail/menu/menu.component';
 import { ReviewsComponent } from 'app/restaurant-detail/reviews/reviews.component';
-import { OrderComponent } from 'app/order/order.component';
 import { TestComponent } from 'app/test/test.component';
+import { OrderSumaryComponent } from 'app/order-sumary/order-sumary.component';
 
 export const ROUTES: Routes = [
     { path: '', component: HomeComponent },
@@ -19,7 +18,8 @@ export const ROUTES: Routes = [
             { path: 'menu', component: MenuComponent },
             { path: 'reviews', component: ReviewsComponent }
         ]},
-    { path: 'order', component: OrderComponent },
-    { path: 'about', component: AboutComponent },
+    { path: 'order-sumary', component: OrderSumaryComponent },
+    { path: 'about', loadChildren: './about/about.module#AboutModule' },
+    { path: 'order', loadChildren: './order/order.module#OrderModule' },
     { path: 'test', component: TestComponent }
-]
+];

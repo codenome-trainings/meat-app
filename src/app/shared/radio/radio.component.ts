@@ -17,9 +17,9 @@ import { RadioOption } from 'app/shared/radio/radio-option.model';
 export class RadioComponent implements OnInit, ControlValueAccessor {
 
   @Input() options: RadioOption[];
-  
+
   value: any;
-  
+
   onChange: any;
 
   constructor() { }
@@ -33,11 +33,7 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
 
   setValue(value: any) {
     this.value = value;
-    this.setOnChange(this.value);
-  }
-
-  setOnChange(value: any): void {
-    this.onChange = value;
+    this.onChange(this.value);
   }
 
   /**
@@ -51,6 +47,7 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
    */
   registerOnChange(fn: any): void {
     this.onChange = fn;
+    console.log(fn);
   }
   /**
    * Set the function to be called when the control receives a touch event.
