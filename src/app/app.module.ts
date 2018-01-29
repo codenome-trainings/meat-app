@@ -3,6 +3,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { ROUTES } from './app.routes';
 
@@ -20,6 +21,7 @@ import { TestComponent } from './test/test.component';
 import { InputTestComponent } from 'app/shared/input-test/input-test.component';
 import { OrderSumaryComponent } from './order-sumary/order-sumary.component';
 import { SharedModule } from 'app/shared/shared.module';
+import { NotFoudComponent } from './not-foud/not-foud.component';
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { SharedModule } from 'app/shared/shared.module';
     ReviewsComponent,
     TestComponent,
     InputTestComponent,
-    OrderSumaryComponent
+    OrderSumaryComponent,
+    NotFoudComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { SharedModule } from 'app/shared/shared.module';
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules } )
   ],
   providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: LOCALE_ID, useValue: 'pt-BR' } ],
   bootstrap: [AppComponent]
 })

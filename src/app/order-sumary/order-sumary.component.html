@@ -9,9 +9,9 @@
     <p>
       <b>Avalie</b> sua experiência:</p>
     <p>
-      <mt-rating (rated)="rated = true"></mt-rating>
+      <mt-rating (rated)="rate()"></mt-rating>
     </p>
-    <p [hidden]="!rated" class="alert alert-success text-sm" style="font-size: 10pt;">Obrigado pela sua avaliação. Você pode continuar comprando. <a [routerLink]="[ '/restaurants']">Clique aqui.</a></p>
+    <p *ngIf="rated" class="alert alert-success text-sm" style="font-size: 10pt;">Obrigado pela sua avaliação. Você pode continuar comprando. <a [routerLink]="[ '/restaurants']">Clique aqui.</a></p>
   </div>
 </section>
 <!-- FIM DO CONTEUDO -->
