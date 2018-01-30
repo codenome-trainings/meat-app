@@ -265,3 +265,24 @@ body {
 i.fa-star, i.fa-star-o {
   cursor: pointer;
 }
+
+/*Barra de busca de restaurantes*/
+
+.search-link {
+  cursor: pointer;
+  color: #555;
+}
+
+.search-link:hover{
+  color: #dd4b39;
+}
+
+.search-bar {
+  opacity: 0;
+  max-height: 0;
+}
+
+input[type=text].form-search {
+  padding: 30px;
+  border-radius: 3px;
+}
