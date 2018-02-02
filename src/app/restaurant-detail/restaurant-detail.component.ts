@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 
-import { RestaurantsService } from 'app/restaurants/restaurants.service';
-import { Restaurant } from 'app/restaurants/restaurant/restaurant.model';
+import { RestaurantsService } from 'app/restaurants/restaurants.service'
+import { Restaurant } from 'app/restaurants/restaurant/restaurant.model'
 
 @Component({
   selector: 'mt-restaurant-detail',
@@ -10,7 +10,7 @@ import { Restaurant } from 'app/restaurants/restaurant/restaurant.model';
 })
 export class RestaurantDetailComponent implements OnInit {
 
-  restaurant: Restaurant;
+  restaurant: Restaurant
 
   constructor(
     private restaurantsService: RestaurantsService,

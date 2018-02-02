@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, forwardRef } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { Component, OnInit, Input, forwardRef } from '@angular/core'
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms'
 
-import { RadioOption } from 'app/shared/radio/radio-option.model';
+import { RadioOption } from 'app/shared/radio/radio-option.model'
 
 @Component({
   selector: 'mt-radio',
@@ -16,11 +16,11 @@ import { RadioOption } from 'app/shared/radio/radio-option.model';
 })
 export class RadioComponent implements OnInit, ControlValueAccessor {
 
-  @Input() options: RadioOption[];
+  @Input() options: RadioOption[]
 
-  value: any;
+  value: any
 
-  onChange: any;
+  onChange: any
 
   constructor() { }
 
@@ -28,26 +28,26 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
   }
 
   isChecked(value: any): boolean {
-    return this.value === value;
+    return this.value === value
   }
 
   setValue(value: any) {
-    this.value = value;
-    this.onChange(this.value);
+    this.value = value
+    this.onChange(this.value)
   }
 
   /**
      * Write a new value to the element.
      */
   writeValue(obj: any): void {
-    this.value = obj;
+    this.value = obj
   }
   /**
    * Set the function to be called when the control receives a change event.
    */
   registerOnChange(fn: any): void {
-    this.onChange = fn;
-    console.log(fn);
+    this.onChange = fn
+    console.log(fn)
   }
   /**
    * Set the function to be called when the control receives a touch event.

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { Component, OnInit } from '@angular/core'
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations'
 
 
-import { ShoppingCartService } from './shopping-cart.service';
+import { ShoppingCartService } from './shopping-cart.service'
 
 @Component({
   selector: 'mt-shopping-cart',
@@ -25,7 +25,7 @@ import { ShoppingCartService } from './shopping-cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  rowState = 'ready';
+  rowState = 'ready'
 
   constructor(private shoppingCartService: ShoppingCartService) { }
 
@@ -33,23 +33,23 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   items(): any[] {
-    return this.shoppingCartService.items;
+    return this.shoppingCartService.items
   }
 
   total(): number {
-    return this.shoppingCartService.total();
+    return this.shoppingCartService.total()
   }
 
   clear(): void {
-    this.shoppingCartService.clear();
+    this.shoppingCartService.clear()
   }
 
   removeItem(item: any): void {
-    this.shoppingCartService.removeItem(item);
+    this.shoppingCartService.removeItem(item)
   }
 
   addItem(item: any): void {
-    this.shoppingCartService.addItem(item);
+    this.shoppingCartService.addItem(item)
   }
 
 }

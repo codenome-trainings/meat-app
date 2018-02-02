@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router'
 
-import { AboutComponent } from 'app/about/about.component';
+import { AboutComponent } from 'app/about/about.component'
 
 const ROUTES: Routes = [
     { path: '', component: AboutComponent }
-];
+]
 
 @NgModule({
     declarations: [AboutComponent],

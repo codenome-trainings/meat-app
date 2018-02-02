@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core'
+import { trigger, state, style, transition, animate } from '@angular/animations'
 
-import { MenuItem } from 'app/restaurant-detail/menu-item/menu-item.model';
+import { MenuItem } from 'app/restaurant-detail/menu-item/menu-item.model'
 
 @Component({
   selector: 'mt-menu-item',
@@ -18,10 +18,10 @@ import { MenuItem } from 'app/restaurant-detail/menu-item/menu-item.model';
 })
 export class MenuItemComponent implements OnInit {
 
-  menuItemState = 'ready';
+  menuItemState = 'ready'
 
-  @Input() menuItem: MenuItem;
-  @Output() add = new EventEmitter();
+  @Input() menuItem: MenuItem
+  @Output() add = new EventEmitter()
 
   constructor() { }
 
@@ -29,7 +29,7 @@ export class MenuItemComponent implements OnInit {
   }
 
   emitAddEvent(): void {
-    this.add.emit(this.menuItem);
+    this.add.emit(this.menuItem)
   }
 
 }

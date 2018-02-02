@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core'
 
 @Component({
   selector: 'mt-rating',
@@ -6,11 +6,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class RatingComponent implements OnInit {
 
-  rates: number[] = [1, 2, 3, 4, 5];
-  rate = 0;
-  previewsRate: number;
+  rates: number[] = [1, 2, 3, 4, 5]
+  rate = 0
+  previewsRate: number
 
-  @Output() rated = new EventEmitter<number>();
+  @Output() rated = new EventEmitter<number>()
 
   constructor() { }
 
@@ -18,22 +18,22 @@ export class RatingComponent implements OnInit {
   }
 
   setRate(r: number): void {
-    this.rate = r;
-    this.previewsRate = undefined;
-    this.rated.emit(this.rate);
+    this.rate = r
+    this.previewsRate = undefined
+    this.rated.emit(this.rate)
   }
 
   setTemporaryRate(r): void {
     if (this.previewsRate === undefined) {
-      this.previewsRate = this.rate;
+      this.previewsRate = this.rate
     }
-    this.rate = r;
+    this.rate = r
   }
 
   clearTempraryRate(): void {
     if (this.previewsRate !== undefined) {
-      this.rate = this.previewsRate;
-      this.previewsRate = undefined;
+      this.rate = this.previewsRate
+      this.previewsRate = undefined
     }
   }
 

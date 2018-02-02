@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Component, OnInit, Input } from '@angular/core'
+import { trigger, state, style, transition, animate } from '@angular/animations'
 
-import { Restaurant } from 'app/restaurants/restaurant/restaurant.model';
+import { Restaurant } from 'app/restaurants/restaurant/restaurant.model'
 
 @Component({
   selector: 'mt-restaurant',
@@ -18,9 +18,9 @@ import { Restaurant } from 'app/restaurants/restaurant/restaurant.model';
 })
 export class RestaurantComponent implements OnInit {
 
-  restaurantState = 'ready';
+  restaurantState = 'ready'
 
-  @Input() restaurant: Restaurant;
+  @Input() restaurant: Restaurant
 
   constructor() { }
 
