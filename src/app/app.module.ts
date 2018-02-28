@@ -21,7 +21,8 @@ import { TestComponent } from './test/test.component'
 import { InputTestComponent } from 'app/shared/input-test/input-test.component'
 import { OrderSumaryComponent } from './order-sumary/order-sumary.component'
 import { SharedModule } from 'app/shared/shared.module'
-import { NotFoudComponent } from './not-foud/not-foud.component'
+import { NotFoudComponent } from './not-foud/not-foud.component';
+import { LoginComponent } from './security/login/login.component'
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { NotFoudComponent } from './not-foud/not-foud.component'
     TestComponent,
     InputTestComponent,
     OrderSumaryComponent,
-    NotFoudComponent
+    NotFoudComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

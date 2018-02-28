@@ -4,7 +4,7 @@ import 'rxjs/add/observable/throw'
 
 export class ErrorHandler {
 
-    static handleError(error: HttpErrorResponse | any) {
+    static handleError(error: HttpErrorResponse) {
 
         let errorMessage: string;
 

@@ -8,9 +8,12 @@ import { ReviewsComponent } from 'app/restaurant-detail/reviews/reviews.componen
 import { TestComponent } from 'app/test/test.component'
 import { OrderSumaryComponent } from 'app/order-sumary/order-sumary.component'
 import { NotFoudComponent } from 'app/not-foud/not-foud.component'
+import { LoginComponent } from 'app/security/login/login.component'
+
 
 export const ROUTES: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'login', component: LoginComponent },
     { path: 'restaurants', component: RestaurantsComponent },
     { path: 'restaurants/:id', component: RestaurantDetailComponent,
         children:
